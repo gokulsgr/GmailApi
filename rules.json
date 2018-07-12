@@ -1,0 +1,61 @@
+{
+	"rules" :[
+		{
+			"conditions" : [
+				{
+					"field" : "from",
+					"predicate" : "contains",
+					"value" : "twitter"
+				}
+				,
+				{
+					"field" : "subject",
+					"predicate" : "contains",
+					"value" : "tweeted"
+				},
+				{
+					"field" : "date",
+					"predicate" : "less_than_months",
+					"value" : "2"
+				}
+			]
+			,
+			"actions" : [{"action": "mark_as_read"},{"action": "archive"}]
+			,
+			"overall_predicate": "all"
+		}
+		,
+		{
+			"conditions" : [
+				{
+					"field" : "from",
+					"predicate" : "contains",
+					"value" : "gokul"
+				}
+				,
+				{
+					"field" : "subject",
+					"predicate" : "contains",
+					"value" : "interview"
+				}
+				,
+				{
+					"field" : "from",
+					"predicate" : "equals",
+					"value" : "gokulraj28597@gmail.com"
+				}
+				,
+				{
+					"field" : "date",
+					"predicate" : "greater_than_days",
+					"value" : "2"
+				}
+
+			]
+			,
+			"actions" : [{"action": "mark_as_read"},{"action": "add_label","value" :"Label_1"}]
+			,
+			"overall_predicate": "all"
+		}
+	]
+}
